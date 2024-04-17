@@ -44,23 +44,33 @@ namespace Game_RPG
     {
         public override int gunakanSkill(int skill)
         {
-            if (MP > pengurangan_MN_skill)
+            if (skill==1)
             {
-                MP = MP - pengurangan_MN_skill;
-                if (skill == 1) // Fireball
+                if (MP > pengurangan_MN_skill)
                 {
-                    return Kekuatan * 2; 
-                }
-                else if (skill == 2) // Ice Blast
+                    MP -= pengurangan_MN-skill;
+                    return kekuatan * 2;
+                ) else
                 {
-                    return Kekuatan * 3;
+                return 0;
                 }
-                else // Healing
+                
+            } else if (skill == 2) // Ice Blast
+            {
+                if (MP > pengurangan_MN_skill)
                 {
-                    HP += 200;
-                    MP += 30;
-                    return 0;
+                    MP -= (pengurangan_MN-skill*2);
+                    return kekuatan * 3;
+                ) else
+                {
+                return 0;
                 }
+            }else // Healing
+            {
+                HP += 200;
+                MP += 30;
+                return 0;
+            }
             }
             else
             {
