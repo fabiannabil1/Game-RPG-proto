@@ -48,32 +48,29 @@ namespace Game_RPG
             {
                 if (MP > pengurangan_MN_skill)
                 {
-                    MP -= pengurangan_MN-skill;
-                    return kekuatan * 2;
-                ) else
+                    MP -= pengurangan_MN_skill;
+                    return Kekuatan * 2;
+                }
+                else
                 {
-                return 0;
+                    return 0;
                 }
                 
             } else if (skill == 2) // Ice Blast
             {
                 if (MP > pengurangan_MN_skill)
                 {
-                    MP -= (pengurangan_MN-skill*2);
-                    return kekuatan * 3;
-                ) else
+                    MP -= (pengurangan_MN_skill * 2);
+                    return Kekuatan * 3;
+                }
+                else
                 {
-                return 0;
+                    return 0;
                 }
             }else // Healing
             {
                 HP += 200;
                 MP += 30;
-                return 0;
-            }
-            }
-            else
-            {
                 return 0;
             }
            
